@@ -26,8 +26,6 @@ var NoteManager = (function(){
       .fail(function(){
         Toast('网络异常');
       });
-
-
   }
 
   function add(){
