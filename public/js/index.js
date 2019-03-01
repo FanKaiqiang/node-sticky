@@ -207,8 +207,6 @@ var NoteManager = (function(){
       .fail(function(){
         Toast('网络异常');
       });
-
-
   }
 
   function add(){
@@ -399,8 +397,8 @@ Note.prototype = {
               + '<div class="note-ct" contenteditable="true"></div>'
               +'</div>';
     this.$note = $(tpl);
-    this.$note.find('.note-ct').text(this.opts.context);
-    this.$note.find('.username').text(this.opts.username);
+    this.$note.find('.note-ct').html(this.opts.context);
+    this.$note.find('.username').html(this.opts.username);
     this.opts.$ct.append(this.$note);
     if(!this.id)  this.$note.css('bottom', '10px');  //新增放到右边
   },
